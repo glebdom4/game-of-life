@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Life</title>
+    <link rel = "stylesheet" type = "text/css" href = "./css/normalize.css">
+    <link rel = "stylesheet" type = "text/css" href = "./css/index.css">
+    <script type = "text/javascript" src = "./js/cell.js"></script>
+    <script type = "text/javascript" src = "./js/drawer.js"></script>
+    <script type = "text/javascript" src = "./js/conway.js"></script>
+    <script type = "text/javascript" src = "./js/game.js"></script>
+    <script type = "text/javascript" src = "./js/index.js"></script>
+</head>
+<body>
+    <h1>Conway's game of life</h1>
+    <canvas id="grid"></canvas>
+    <section id="information_box">
+        <div class="subtitle">Running Information</div>
+        <p class="info">
+            <abbr title="Current Generation">Generation</abbr>:
+            <span id="generation"></span> |
+            <abbr title="Number of live cells">Live cells</abbr>:
+            <span id="livecells"></span> |
+            <abbr title="Execution times">Step time</abbr>:
+            <span id="steptime"></span> ms
+        </p>
+    </section>
+    <section id="control_box">
+        <div class="subtitle">Control Bar</div>
+        <form id = "buttons_form">
+            <input type="button" id="button_run" value="Run">
+            <input type="button" id="button_step" value="Step">
+            <input type="button" id="button_clean" value="Clear">
+        </form>
+    </section>
+    <section id="size_box">
+        <div class="subtitle">Start settings</div>
+        <form id = "input_form">
+            <abbr title="Canvas height or width">Canvas size</abbr>:
+            <input type="text" id="grid_size" value="40"> |
+            <abbr title="Size of a pixel for a new ground">Cell size</abbr>:
+            <input type="text" id="pixel_size" value="10"> |
+            <abbr title="Delay time in milliseconds">Interval</abbr>:
+            <input type="text" id="interval" value="50">
+            <input type="button" id="button_apply" value="Apply">
+        </form>
+    </section>
+</body>
+</html>
